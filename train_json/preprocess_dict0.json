@@ -1,0 +1,14 @@
+{
+  "sic": "abs",
+  "tas": "anomaly",
+  "ta500": "anomaly",
+  "tos": "anomaly",
+  "rsds": "anomaly",
+  "rsus": "anomaly",
+  "psl": "anomaly",
+  "zg500": "anomaly",
+  "zg250": "anomaly",
+  "ua10": "abs",
+  "uas": "abs",
+  "vas": "abs"
+}
