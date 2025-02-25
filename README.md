@@ -17,13 +17,14 @@ Developed through </font>**<font style="color:rgb(64, 64, 64);">multi-institutio
 + <font style="color:rgb(64, 64, 64);">Code: MIT License</font>
 
 <h1 id="XB2vh">Get start</h1>
+
 ```bash
 git https://github.com/WeiWang31/IceMamba.git
 cd IceMamba
 ```
 
 <h2 id="ucHJq">Installation</h2>
-**<font style="color:#DF2A3F;">The base environment is cuda 11.7=11.7, python=3.7</font>**
+<font style="color:#DF2A3F;">The base environment is cuda=11.7, python=3.7</font>
 
 1. create conda environment
 
