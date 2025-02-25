@@ -1,7 +1,8 @@
+# <font style="color:rgb(64, 64, 64);">IceMamba</font>
 **<font style="color:rgb(64, 64, 64);">IceMamba: Arctic Sea Ice Forecasting Framework</font>**<font style="color:rgb(64, 64, 64);">  
-Developed through </font>**<font style="color:rgb(64, 64, 64);">multi-institutional collaboration</font>**<font style="color:rgb(64, 64, 64);"> led by the School of </font>**<font style="color:rgb(64, 64, 64);">Computer Science at Fudan University</font>**<font style="color:rgb(64, 64, 64);">, in partnership with the Department of Atmospheric Sciences and China Polar Research Institute, IceMamba is an open-source deep learning framework specializing in </font>**<font style="color:rgb(64, 64, 64);">pan-Arctic seasonal sea ice concentration (SIC) forecasting</font>**<font style="color:rgb(64, 64, 64);">.</font>
+</font><font style="color:rgb(64, 64, 64);">Developed through </font>**<font style="color:rgb(64, 64, 64);">multi-institutional collaboration</font>**<font style="color:rgb(64, 64, 64);"> led by the School of </font>**<font style="color:rgb(64, 64, 64);">Computer Science at Fudan University</font>**<font style="color:rgb(64, 64, 64);">, in partnership with the Department of Atmospheric Sciences and China Polar Research Institute, IceMamba is an open-source deep learning framework specializing in </font>**<font style="color:rgb(64, 64, 64);">pan-Arctic seasonal sea ice concentration (SIC) forecasting</font>**<font style="color:rgb(64, 64, 64);">.</font>
 
-<h3 id="aa0aa266"><font style="color:rgb(64, 64, 64);">📦</font><font style="color:rgb(64, 64, 64);"> Open Science Resources</font></h3>
+### <font style="color:rgb(64, 64, 64);">📦</font><font style="color:rgb(64, 64, 64);"> Open Science Resources</font>
 <font style="color:rgb(64, 64, 64);">We provide full accessibility to accelerate polar climate research:</font>
 
 + **<font style="color:rgb(64, 64, 64);">Model Weights</font>**<font style="color:rgb(64, 64, 64);">: Pretrained parameters for rapid deployment</font>
@@ -16,15 +17,14 @@ Developed through </font>**<font style="color:rgb(64, 64, 64);">multi-institutio
 + <font style="color:rgb(64, 64, 64);">Data: CC-BY 4.0 International</font>
 + <font style="color:rgb(64, 64, 64);">Code: MIT License</font>
 
-<h1 id="XB2vh">Get start</h1>
-
+# Get start
 ```bash
 git https://github.com/WeiWang31/IceMamba.git
 cd IceMamba
 ```
 
-<h2 id="ucHJq">Installation</h2>
-<font style="color:#DF2A3F;">The base environment is cuda=11.7, python=3.7</font>
+## Installation
+**<font style="color:#DF2A3F;">The base environment is cuda 11.7=11.7, python=3.7</font>**
 
 1. create conda environment
 
@@ -43,7 +43,7 @@ pip install torchsummary
 cd selective_scan && pip install . && pytest
 ```
 
-<h3 id="data-acquisition"><font style="color:rgb(64, 64, 64);">Data Acquisition</font></h3>
+### <font style="color:rgb(64, 64, 64);">Data Acquisition</font>
 <font style="color:rgb(64, 64, 64);">🔗</font><font style="color:rgb(64, 64, 64);"> Download the complete resource bundle from our Zenodo repository:  
 </font>_<font style="color:rgb(64, 64, 64);">Package includes</font>_<font style="color:rgb(64, 64, 64);">:</font>
 
@@ -52,7 +52,10 @@ cd selective_scan && pip install . && pytest
 
 ```bash
 # Unpack archives and configure paths
-unzip IceMamba_DataPack.zip && unzip IceMamba_Models.zip
+unzip ERA5_EASE.zip
+unzip ORAS5_EASE.zip
+unzip IceMamba-4_SIPN_ckpt.zip
+unzip IceMamba-1-only-SIC_SIPN_ckpt.zip
 
 # Data deployment
 mv ERA5_EASE ORAS5_EASE ./data_preprocess/
@@ -63,13 +66,13 @@ mv IceMamba-4_SIPN_ckpt/ ./SIPN_evaluation_IceMamba-4
 mv IceMamba-1-only-SIC_SIPN_ckpt/ ./SIPN_evaluation_IceMamba-1-only-SIC
 ```
 
-<h2 id="Qi1PG">Date Preprocess</h2>
+## Date Preprocess
 ```bash
 cd ./data_preprocess
 python data_preprocess.py
 ```
 
-<h2 id="OiHko">Test models</h2>
+## Test models
 1. Testing all IceMamba variants
 
 ```bash
@@ -93,7 +96,7 @@ bash SIPN_evaluation.sh
 python calculate_SIPN_evaluation_result.py
 ```
 
-<h2 id="Wl0hd">Training models</h2>
+## Training models
 If you want to train IceMamba variants like in our paper. You can:
 
 ```bash
@@ -115,24 +118,24 @@ cd ./SIPN_evaluation_IceMamba-1-only-SIC
 bash train.sh
 ```
 
-<h2 id="mjmPc">**<font style="color:rgb(64, 64, 64);">Custom Model Training (Optional)</font>**<font style="color:rgb(64, 64, 64);"></font></h2>
+## **<font style="color:rgb(64, 64, 64);">Custom Model Training (Optional)</font>**<font style="color:rgb(64, 64, 64);"></font>
 <font style="color:rgb(64, 64, 64);">Leverage our framework to develop novel IceMamba variants or entirely new sea ice prediction architectures. Implementation workflow:</font>
 
 <font style="color:rgb(64, 64, 64);">🛠</font><font style="color:rgb(64, 64, 64);"> Configuration Guide</font>
 
-1. **<font style="color:rgb(64, 64, 64);">Preprocessing Control</font>**<font style="color:rgb(64, 64, 64);"> </font><font style="color:rgb(64, 64, 64);">(</font>`<font style="color:rgb(64, 64, 64);">preprocess_dict_xx.json</font>`<font style="color:rgb(64, 64, 64);">)</font>
-    - `<font style="color:rgb(64, 64, 64);">"abs"</font>`<font style="color:rgb(64, 64, 64);">: Standard normalization</font>
-    - `<font style="color:rgb(64, 64, 64);">"anomaly"</font>`<font style="color:rgb(64, 64, 64);">: Anomaly-normalized hybrid processing</font>
-    - _<font style="color:rgb(64, 64, 64);">Critical</font>_<font style="color:rgb(64, 64, 64);">: Variables must maintain</font><font style="color:rgb(64, 64, 64);"> </font>**<font style="color:rgb(64, 64, 64);">strict alignment</font>**<font style="color:rgb(64, 64, 64);"> </font><font style="color:rgb(64, 64, 64);">with</font><font style="color:rgb(64, 64, 64);"> </font>`<font style="color:rgb(64, 64, 64);">time_dict_xx.json</font>`
-2. **<font style="color:rgb(64, 64, 64);">Temporal Configuration</font>**<font style="color:rgb(64, 64, 64);"> </font><font style="color:rgb(64, 64, 64);">(</font>`<font style="color:rgb(64, 64, 64);">time_dict_xx.json</font>`<font style="color:rgb(64, 64, 64);">)</font>
-    - <font style="color:rgb(64, 64, 64);">Defines historical windowing strategy through</font><font style="color:rgb(64, 64, 64);"> </font>`<font style="color:rgb(64, 64, 64);">lag_month</font>`<font style="color:rgb(64, 64, 64);"> </font><font style="color:rgb(64, 64, 64);">parameters</font>
+1. **<font style="color:rgb(64, 64, 64);">Preprocessing Control</font>**<font style="color:rgb(64, 64, 64);"> </font><font style="color:rgb(64, 64, 64);">(</font><font style="color:rgb(64, 64, 64);">preprocess_dict_xx.json</font><font style="color:rgb(64, 64, 64);">)</font>
+    - <font style="color:rgb(64, 64, 64);">"abs"</font><font style="color:rgb(64, 64, 64);">: Standard normalization</font>
+    - <font style="color:rgb(64, 64, 64);">"anomaly"</font><font style="color:rgb(64, 64, 64);">: Anomaly-normalized hybrid processing</font>
+    - _<font style="color:rgb(64, 64, 64);">Critical</font>_<font style="color:rgb(64, 64, 64);">: Variables must maintain</font><font style="color:rgb(64, 64, 64);"> </font>**<font style="color:rgb(64, 64, 64);">strict alignment</font>**<font style="color:rgb(64, 64, 64);"> </font><font style="color:rgb(64, 64, 64);">with</font><font style="color:rgb(64, 64, 64);"> </font><font style="color:rgb(64, 64, 64);">time_dict_xx.json</font>
+2. **<font style="color:rgb(64, 64, 64);">Temporal Configuration</font>**<font style="color:rgb(64, 64, 64);"> </font>(`time_dict_xx.json`<font style="color:rgb(64, 64, 64);">)</font>
+    - <font style="color:rgb(64, 64, 64);">Defines historical windowing strategy through</font><font style="color:rgb(64, 64, 64);"> </font><font style="color:rgb(64, 64, 64);">lag_month</font><font style="color:rgb(64, 64, 64);"> </font><font style="color:rgb(64, 64, 64);">parameters</font>
     - <font style="color:rgb(64, 64, 64);">Supports dynamic temporal dependency engineering</font>
 
 
 
 <font style="color:rgb(64, 64, 64);">Overall</font>**<font style="color:rgb(64, 64, 64);">, IceMamba</font>**<font style="color:rgb(64, 64, 64);"> is not a single-purpose model, but a modular deep learning framework specifically designed for flexible sea ice prediction across multiple temporal scales (e.g., short-term, seasonal, and long-term forecasting). Key features include:</font>
 
-+ <font style="color:rgb(64, 64, 64);">🧩</font><font style="color:rgb(64, 64, 64);"> </font>**<font style="color:rgb(64, 64, 64);">Decoupled Architecture</font>**<font style="color:rgb(64, 64, 64);">: Our implementation with</font><font style="color:rgb(64, 64, 64);"> </font>`<font style="color:rgb(64, 64, 64);">PyTorch Lightning</font>`<font style="color:rgb(64, 64, 64);"> </font><font style="color:rgb(64, 64, 64);">creates clean separation between model components and training workflow</font>
++ <font style="color:rgb(64, 64, 64);">🧩</font><font style="color:rgb(64, 64, 64);"> </font>**<font style="color:rgb(64, 64, 64);">Decoupled Architecture</font>**<font style="color:rgb(64, 64, 64);">: Our implementation with</font><font style="color:rgb(64, 64, 64);"> </font><font style="color:rgb(64, 64, 64);">PyTorch Lightning</font><font style="color:rgb(64, 64, 64);"> </font><font style="color:rgb(64, 64, 64);">creates clean separation between model components and training workflow</font>
 + <font style="color:rgb(64, 64, 64);">🔧</font><font style="color:rgb(64, 64, 64);"> </font>**<font style="color:rgb(64, 64, 64);">Customizable Framework</font>**<font style="color:rgb(64, 64, 64);">: Researchers can either:  
 </font><font style="color:rgb(64, 64, 64);">a) Modify/replace the core IceMamba model  
 </font><font style="color:rgb(64, 64, 64);">b) Directly adopt our training infrastructure for custom sea ice prediction models</font>
