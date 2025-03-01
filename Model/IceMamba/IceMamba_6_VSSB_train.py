@@ -196,7 +196,7 @@ class MaskedLoss(nn.Module):
 
 
 class light_model(pl.LightningModule):
-    def __init__(self, in_chans, num_forecast, patchembed_version='v1', downsample_version='v1', batch_size=2, lr=1e-4, ssm_drop_rate=0.0,
+    def __init__(self, in_chans, num_forecast, patchembed_version='v1', downsample_version='v1', batch_size=1, lr=1e-3, ssm_drop_rate=0.0,
                  mlp_drop_rate=0.0, loss=MaskedLoss()):
         super().__init__()
         self.patchembed_version = patchembed_version
