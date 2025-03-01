@@ -54,6 +54,7 @@ cd selective_scan && pip install . && pytest
 # Unpack archives and configure paths
 unzip ERA5_EASE.zip
 unzip ORAS5_EASE.zip
+unzip ckpt.zip
 unzip IceMamba-4_SIPN_ckpt.zip
 unzip IceMamba-1-only-SIC_SIPN_ckpt.zip
 
