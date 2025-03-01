@@ -14,3 +14,4 @@ python IceMamba_test.py --num_forecast 6 --ckpt_path ./ckpt/best_sm_icemamba-6-E
 python IceMamba_test.py --num_forecast 6 --ckpt_path ./ckpt/best_sm_icemamba-6-ua10.ckpt --time_dict_path ../../train_json/time_dict_ua10.json --preprocess_dict_path ../../train_json/preprocess_dict_ua10.json --result_save_name result_IceMamba-6-ua10
 # IceMamba-6-VSSB
 python IceMamba_6_VSSB_test.py --num_forecast 6 --ckpt_path ./ckpt/best_sm_icemamba-6-VSSB.ckpt --time_dict_path ../../train_json/time_dict8.json --preprocess_dict_path ../../train_json/preprocess_dict8.json --result_save_name result_IceMamba-6-VSSB
+
