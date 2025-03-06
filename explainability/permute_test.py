@@ -331,5 +331,3 @@ if __name__ == '__main__':
                         test_set_path='./test_set_era5_combine_icemamba-6-ua10.npz',
                         in_chans=50,
                         is_ua10=True)
-
-
