@@ -39,7 +39,7 @@ def get_sep_data(NSIDC_path, mask_path, test_year=2001):
 
 def predict_september(NSIDC_path, test_year=2001):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    model = light_model.load_from_checkpoint('./IceMamba_SIPN_ckpt/best_sm_' + str(test_year) + '.ckpt',
+    model = light_model.load_from_checkpoint('./IceMamba-1-only-SIC_SIPN_ckpt/best_sm_' + str(test_year) + '.ckpt',
                                              in_chans=12,
                                              num_forecast=1,
                                              lr=1e-3,
