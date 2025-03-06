@@ -83,5 +83,5 @@ def generate_combine_dataset(agg_sic_path='../data_preprocess/SIC/g2202_197901_2
 
 
 if __name__ == '__main__':
+    generate_combine_dataset()
     generate_combine_dataset_ua10()
-    # generate_combine_dataset()

@@ -232,7 +232,7 @@ class light_model(pl.LightningModule):
         return {'optimizer': optim, 'lr_scheduler': scheduler}
 
 
-def _feature_permute(trainer, model, test_set_path, name, permute_channel, seed):
+def _feature_permute(trainer, model, test_set_path, name, permute_channel, seed, is_ua10=False):
     # test = trainer.test(model,
     #                     data_transform(
     #                         test_set_path,
@@ -261,10 +261,16 @@ def _feature_permute(trainer, model, test_set_path, name, permute_channel, seed)
     np_preds = np.array(preds_list)
     print(np_preds.shape)
 
-    if seed == -1:
-        path = 'result/org/'
+    result_path = ''
+    if is_ua10:
+        result_path = './result_ua10'
     else:
-        path = './result/seed_' + str(seed) + '/'
+        result_path = './result'
+
+    if seed == -1:
+        path = result_path + '/org/'
+    else:
+        path = result_path + '/seed_' + str(seed) + '/'
 
     if os.path.exists(path):
         np.save(path + name, np_preds)
@@ -273,7 +279,7 @@ def _feature_permute(trainer, model, test_set_path, name, permute_channel, seed)
         np.save(path + name, np_preds)
 
 
-def feature_permute(seed, ckpt_path, test_set_path, in_chans=50):
+def feature_permute(seed, ckpt_path, test_set_path, in_chans=50, is_ua10=False):
     parser = argparse.ArgumentParser()
     parser.add_argument('--num_forecast', default=6)
     args = parser.parse_args()
@@ -290,22 +296,39 @@ def feature_permute(seed, ckpt_path, test_set_path, in_chans=50):
     for i in range(50):
         if seed == -1:
             name = 'prd_org'
-            _feature_permute(trainer, model, test_set_path, name, -1, seed=seed)
+            _feature_permute(trainer, model, test_set_path, name, -1, seed=seed, is_ua10=is_ua10)
             break
         else:
             name = 'prd_' + str(i) + '_seed_' + str(seed)
-            _feature_permute(trainer, model, test_set_path, name, i, seed=seed)
+            _feature_permute(trainer, model, test_set_path, name, i, seed=seed, is_ua10=is_ua10)
 
 
 if __name__ == '__main__':
+    # 可解释性分析
     feature_permute(seed=-1,
                     ckpt_path='../Model/IceMamba/ckpt/best_sm_icemamba-6.ckpt',
                     test_set_path='./test_set_era5_combine_icemamba-6.npz',
-                    in_chans=50)
+                    in_chans=50,
+                    is_ua10=False)
 
     for i in range(23, 33):
         feature_permute(seed=i,
                         ckpt_path='../Model/IceMamba/ckpt/best_sm_icemamba-6.ckpt',
                         test_set_path='./test_set_era5_combine_icemamba-6.npz',
-                        in_chans=50)
+                        in_chans=50,
+                        is_ua10=False)
+
+    # ua10 去趋势后的可解释性分析
+    feature_permute(seed=-1,
+                    ckpt_path='../Model/IceMamba/ckpt/best_sm_icemamba-6-ua10.ckpt',
+                    test_set_path='./test_set_era5_combine_icemamba-6-ua10.npz',
+                    in_chans=50,
+                    is_ua10=True)
+
+    for i in range(23, 33):
+        feature_permute(seed=i,
+                        ckpt_path='../Model/IceMamba/ckpt/best_sm_icemamba-6-ua10.ckpt',
+                        test_set_path='./test_set_era5_combine_icemamba-6-ua10.npz',
+                        in_chans=50,
+                        is_ua10=True)
 
