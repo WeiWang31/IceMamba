@@ -93,7 +93,7 @@ python calculate_SIPN_evaluation_result.py
 
 ```bash
 cd ./SIPN_evaluation_IceMamba-1-only-SIC
-bash SIPN_evaluation.sh
+python IceMamba-1-only_SIC_test.py
 python calculate_SIPN_evaluation_result.py
 ```
 
