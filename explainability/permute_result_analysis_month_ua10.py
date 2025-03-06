@@ -35,7 +35,7 @@ def calculate_RMSE_and_MAE_order_by_month(y_prediction, y_true, file_name, start
 
     mae_all = mae_all / month_distribution
 
-    path = './result/seed_' + file_name.split('_')[-1] + '_month/'
+    path = './result_ua10/seed_' + file_name.split('_')[-1] + '_month/'
     if not os.path.exists(path):
         os.makedirs(path)
     # 持久化SIC loss
@@ -57,7 +57,7 @@ def calculate_MAE_order_by_lead_time(y_prediction, y_true, file_name):
         mae_list.append(np.mean(np.abs(mask_obs - mask_prd)))
 
     mae_list = np.array(mae_list)
-    path = './result/seed_' + file_name.split('_')[-1] + '/'
+    path = './result_ua10/seed_' + file_name.split('_')[-1] + '/'
     if not os.path.exists(path):
         os.makedirs(path)
     # 持久化SIC loss
@@ -66,7 +66,7 @@ def calculate_MAE_order_by_lead_time(y_prediction, y_true, file_name):
 
 
 def _calculate_MAE_seed(variable, seed, y_true):
-    y_pred = np.load('./result/seed_' + str(seed) + '/prd_' + str(variable) + '_seed_' + str(seed) + '.npy')
+    y_pred = np.load('./result_ua10/seed_' + str(seed) + '/prd_' + str(variable) + '_seed_' + str(seed) + '.npy')
     calculate_MAE_order_by_lead_time(y_pred, y_true, file_name='variable_' + str(variable) + '_seed_' + str(seed))
     calculate_RMSE_and_MAE_order_by_month(y_pred, y_true, file_name='variable_' + str(variable) + '_seed_' + str(seed))
 
@@ -81,28 +81,28 @@ def calculate_MAE_seed():
 
 
 def mean_MAE_all_seed():
-    save_path = 'result/seed_mean/'
+    save_path = 'result_ua10/seed_mean/'
     if not os.path.exists(save_path):
         os.mkdir(save_path)
 
     for variable in range(50):
         MAE = np.zeros(shape=(6))
         for seed in range(23,  33):
-            path = './result/seed_' + str(seed) + '/variable_' + str(variable) + '_seed_' + str(seed) + '.npy'
+            path = './result_ua10/seed_' + str(seed) + '/variable_' + str(variable) + '_seed_' + str(seed) + '.npy'
             MAE += np.load(path)
         # 注意修改
         MAE = MAE / 10
 
         np.save(save_path + 'variable_' + str(variable) + '_mean_MAE_all_seed.npy', MAE)
 
-    save_path = 'result/seed_mean_month/'
+    save_path = 'result_ua10/seed_mean_month/'
     if not os.path.exists(save_path):
         os.mkdir(save_path)
 
     for variable in range(50):
         MAE = np.zeros(shape=(12))
         for seed in range(23, 33):
-            path = './result/seed_' + str(seed) + '_month/variable_' + str(variable) + '_seed_' + str(seed) + '.npy'
+            path = './result_ua10/seed_' + str(seed) + '_month/variable_' + str(variable) + '_seed_' + str(seed) + '.npy'
             MAE += np.load(path)
         # 注意修改
         MAE = MAE / 10
@@ -110,9 +110,9 @@ def mean_MAE_all_seed():
 
 
 def mae_permute_lead_time():
-    path = 'result/seed_mean_lead_time/'
+    path = 'result_ua10/seed_mean_lead_time/'
 
-    original_mae = calculate_MAE_order_by_lead_time(np.load('result/org/prd_org.npy'),
+    original_mae = calculate_MAE_order_by_lead_time(np.load('result_ua10/org/prd_org.npy'),
                                                     np.load('./test_set_era5_combine_icemamba-6.npz')['Y'],
                                                     file_name='original_mae.npy')
 
@@ -123,7 +123,7 @@ def mae_permute_lead_time():
     for i in range(50):
         MAE = np.zeros(shape=(50, 6))
         for j in range(50):
-            mae_permute = np.load('./result/seed_mean/variable_' + str(j) + '_mean_MAE_all_seed' + '.npy') - original_mae
+            mae_permute = np.load('./result_ua10/seed_mean/variable_' + str(j) + '_mean_MAE_all_seed' + '.npy') - original_mae
             MAE[j, :] += mae_permute
 
     MAE_all = MAE * 10000
@@ -155,13 +155,13 @@ def mae_permute_lead_time():
     plt.ylabel('Input variable name')
     plt.title(r'MAE change $ \times 10^{-2}$ %')
     # 显示热力图
-    plt.savefig('era5_lead_time.svg', dpi=600, bbox_inches='tight')
+    plt.savefig('era5_lead_time_ua10.svg', dpi=600, bbox_inches='tight')
     plt.show()
 
 
 def mae_permute_month():
-    path = 'result/seed_mean_lead_time/'
-    original_mae = calculate_RMSE_and_MAE_order_by_month(np.load('result/org/prd_org.npy'),
+    path = 'result_ua10/seed_mean_lead_time/'
+    original_mae = calculate_RMSE_and_MAE_order_by_month(np.load('result_ua10/org/prd_org.npy'),
                                                          np.load('./test_set_era5_combine_icemamba-6.npz')['Y'],
                                                          file_name='original_mae.npy')
 
@@ -172,7 +172,7 @@ def mae_permute_month():
     for i in range(50):
         MAE = np.zeros(shape=(50, 12))
         for j in range(50):
-            mae_permute = np.load('./result/seed_mean_month/variable_' + str(j) + '_mean_MAE_all_seed' + '.npy') - original_mae
+            mae_permute = np.load('./result_ua10/seed_mean_month/variable_' + str(j) + '_mean_MAE_all_seed' + '.npy') - original_mae
             MAE[j, :] += mae_permute
 
     MAE_all = MAE * 10000
@@ -204,7 +204,7 @@ def mae_permute_month():
     plt.ylabel('Input variable name')
     plt.title(r'MAE change $ \times 10^{-2}$ %')
     # 显示热力图
-    plt.savefig('era5_month.svg', dpi=600, bbox_inches='tight')
+    plt.savefig('era5_month_ua10.svg', dpi=600, bbox_inches='tight')
     plt.show()
 
 
