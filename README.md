@@ -97,6 +97,20 @@ python IceMamba-1-only_SIC_test.py
 python calculate_SIPN_evaluation_result.py
 ```
 
+## Explainability Test
+
+```bash
+cd ./explainability
+# generate two test sets
+python generate_testset.py
+# Explainability Test
+python permute_test.py
+# calculate MAE after permuting
+python permute_result_analysis_month.py
+python permute_result_analysis_month_ua10.py
+```
+
+
 ## Training models
 If you want to train IceMamba variants like in our paper. You can:
 
