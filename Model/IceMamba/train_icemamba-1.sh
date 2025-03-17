@@ -1,0 +1,11 @@
+mkdir -p logs/train_logs/
+python IceMamba_train.py --num_forecast 1 --train_type 1-0 --time_dict_path ../../train_json/time_dict0.json --preprocess_dict_path ../../train_json/preprocess_dict0.json > logs/train_logs/train_log_1-0.txt 2>&1
+python IceMamba_train.py --num_forecast 1 --train_type 1-1 --time_dict_path ../../train_json/time_dict1.json --preprocess_dict_path ../../train_json/preprocess_dict1.json > logs/train_logs/train_log_1-1.txt 2>&1
+python IceMamba_train.py --num_forecast 1 --train_type 1-2 --time_dict_path ../../train_json/time_dict2.json --preprocess_dict_path ../../train_json/preprocess_dict2.json > logs/train_logs/train_log_1-2.txt 2>&1
+python IceMamba_train.py --num_forecast 1 --train_type 1-3 --time_dict_path ../../train_json/time_dict3.json --preprocess_dict_path ../../train_json/preprocess_dict3.json > logs/train_logs/train_log_1-3.txt 2>&1
+python IceMamba_train.py --num_forecast 1 --train_type 1-4 --time_dict_path ../../train_json/time_dict4.json --preprocess_dict_path ../../train_json/preprocess_dict4.json > logs/train_logs/train_log_1-4.txt 2>&1
+python IceMamba_train.py --num_forecast 1 --train_type 1-5 --time_dict_path ../../train_json/time_dict5.json --preprocess_dict_path ../../train_json/preprocess_dict5.json > logs/train_logs/train_log_1-5.txt 2>&1
+python IceMamba_train.py --num_forecast 1 --train_type 1-6 --time_dict_path ../../train_json/time_dict6.json --preprocess_dict_path ../../train_json/preprocess_dict6.json > logs/train_logs/train_log_1-6.txt 2>&1
+python IceMamba_train.py --num_forecast 1 --train_type 1-7 --time_dict_path ../../train_json/time_dict7.json --preprocess_dict_path ../../train_json/preprocess_dict7.json > logs/train_logs/train_log_1-7.txt 2>&1
+python IceMamba_train.py --num_forecast 1 --train_type 1-8 --time_dict_path ../../train_json/time_dict8.json --preprocess_dict_path ../../train_json/preprocess_dict8.json > logs/train_logs/train_log_1-8.txt 2>&1
+python IceMamba_train.py --num_forecast 1 --train_type 1-9 --time_dict_path ../../train_json/time_dict9.json --preprocess_dict_path ../../train_json/preprocess_dict9.json > logs/train_logs/train_log_1-9.txt 2>&1
