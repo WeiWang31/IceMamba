@@ -116,7 +116,9 @@ If you want to train IceMamba variants like in our paper. You can:
 
 ```bash
 cd ./Model/IceMamba
-bash train.sh
+bash train_iceMamba-1.sh
+bash train_iceMamba-4.sh
+bash train_iceMamba-6.sh
 ```
 
 If you want to train IceMamba-4 for SIPN benchmark like in our paper. You can:
