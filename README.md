@@ -7,11 +7,9 @@
 <sup>1</sup>  School of Computer Science, Fudan University, Shanghai, China, <sup>2</sup>  Department of Atmospheric and Oceanic Sciences & Institute of Atmospheric Sciences, Fudan
 University, Shanghai, China,  <sup>3</sup> Key Laboratory of Polar Science, MNR, Polar Research Institute of China, Shanghai, China.
 
-Paper:  
-[https://doi.org/10.1038/s41612-025-01058-0](https://www.nature.com/articles/s41612-025-01058-0)  
+Paper: [https://doi.org/10.1038/s41612-025-01058-0](https://www.nature.com/articles/s41612-025-01058-0)  
 
-Supplementary Information:  
-[https://doi.org/10.1038/s41612-025-01058-0](https://www.nature.com/articles/s41612-025-01058-0)  
+Supplementary Information: [https://doi.org/10.1038/s41612-025-01058-0](https://www.nature.com/articles/s41612-025-01058-0)  
 
 [Paper downloading](https://github.com/WeiWang31/IceMamba/edit/master/assets/Paper.pdf)  
 [Supplementary Information downloading](https://github.com/WeiWang31/IceMamba/edit/master/assets/Supplementary_Information.pdf)
@@ -19,9 +17,15 @@ Supplementary Information:
 
 </div>
 
+# <font style="color:rgb(64, 64, 64);">Abstract</font>
+<p align="center">
+The rapid decline of Arctic sea ice resulting from anthropogenic climate change poses significant risks to indigenous communities, ecosystems, and the global climate system. This situation emphasizes the immediate necessity for precise seasonal sea ice forecasts. While dynamical models perform well for short-term forecasts, they encounter limitations in long-term forecasts and are computationally intensive. Deep learning models, while more computationally efficient, often have difficulty managing seasonal variations and uncertainties when dealing with complex sea ice dynamics. In this research, we introduce IceMamba, a deep learning architecture that integrates sophisticated attention mechanisms within the state space model. Through comparative analysis of 25 renowned forecast models, including dynamical, statistical, and deep learning approaches, our experimental results indicate that IceMamba delivers excellent seasonal forecasting capabilities for Pan-Arctic sea ice concentration. Specifically, IceMamba outperforms all tested models regarding average RMSE and anomaly correlation coefficient (ACC) and ranks second in Integrated Ice Edge Error (IIEE). This innovative approach enhances our ability to foresee and alleviate the effects of sea ice variability, offering essential insights for strategies aimed at climate adaptation.
+</p>
+
+
 # <font style="color:rgb(64, 64, 64);">Overview</font>
 <p align="center">
-  <img src="assets/Overview.png" alt="architecture" width="80%">
+  <img src="assets/Overview.png" alt="architecture" width="100%">
 </p>
 
 
