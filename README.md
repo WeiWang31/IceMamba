@@ -2,7 +2,7 @@
 <h1>Seasonal forecasting of Pan-Arctic sea ice with state space model </h1>
 <h3>IceMamba: Arctic Sea Ice Forecasting Framework</h3>
 
-[Wei Wang](https://github.com/WeiWang31)<sup>1</sup>,[WeiDong Yang]<sup>1</sup>,[Lei Wang]<sup>1</sup>, [GuiHua Wang]<sup>1</sup>, [Lei RuiBo]<sup>3</sup>, 
+[Wei Wang](https://github.com/WeiWang31)<sup>1</sup>,WeiDong Yang<sup>1</sup>,Lei Wang<sup>2</sup>, GuiHua Wang<sup>2</sup>, Lei RuiBo<sup>3</sup>, 
 
 <sup>1</sup>  School of Computer Science, Fudan University, Shanghai, China, <sup>2</sup>  Department of Atmospheric and Oceanic Sciences & Institute of Atmospheric Sciences, Fudan
 University, Shanghai, China,  <sup>3</sup> Key Laboratory of Polar Science, MNR, Polar Research Institute of China, Shanghai, China.
