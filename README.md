@@ -1,3 +1,18 @@
+<div align="center">
+<h1>Seasonal forecasting of Pan-Arctic sea ice with state space model </h1>
+<h3>IceMamba: Arctic Sea Ice Forecasting Framework</h3>
+
+[Wei Wang](https://github.com/WeiWang31)<sup>1</sup>,[WeiDong Yang]<sup>1</sup>,[Lei Wang]<sup>1</sup>, [GuiHua Wang]<sup>1</sup>, [Lei RuiBo]<sup>3</sup>, 
+
+<sup>1</sup>  School of Computer Science, Fudan University, Shanghai, China, <sup>2</sup>  Department of Atmospheric and Oceanic Sciences & Institute of Atmospheric Sciences, Fudan
+University, Shanghai, China,  <sup>3</sup> Key Laboratory of Polar Science, MNR, Polar Research Institute of China, Shanghai, China.
+
+Paper: ([https://doi.org/10.1038/s41612-025-01058-0](https://www.nature.com/articles/s41612-025-01058-0))
+
+</div>
+
+
+
 # <font style="color:rgb(64, 64, 64);">IceMamba</font>
 **<font style="color:rgb(64, 64, 64);">IceMamba: Arctic Sea Ice Forecasting Framework</font>**<font style="color:rgb(64, 64, 64);">  
 </font><font style="color:rgb(64, 64, 64);">Developed through </font>**<font style="color:rgb(64, 64, 64);">multi-institutional collaboration</font>**<font style="color:rgb(64, 64, 64);"> led by the School of </font>**<font style="color:rgb(64, 64, 64);">Computer Science at Fudan University</font>**<font style="color:rgb(64, 64, 64);">, in partnership with the Department of Atmospheric Sciences and China Polar Research Institute, IceMamba is an open-source deep learning framework specializing in </font>**<font style="color:rgb(64, 64, 64);">pan-Arctic seasonal sea ice concentration (SIC) forecasting</font>**<font style="color:rgb(64, 64, 64);">.</font>
@@ -165,16 +180,21 @@ bash train.sh
 **<font style="color:rgb(64, 64, 64);"></font>**
 
 
+## **<font style="color:rgb(64, 64, 64);">Citation</font>**<font style="color:rgb(64, 64, 64);"></font>
+
+```bash
+@article{wang2025seasonal,
+  title={Seasonal forecasting of Pan-Arctic sea ice with state space model},
+  author={Wang, Wei and Yang, Weidong and Wang, Lei and Wang, Guihua and Lei, Ruibo},
+  journal={npj Climate and Atmospheric Science},
+  volume={8},
+  number={1},
+  pages={1--17},
+  year={2025},
+  publisher={Nature Publishing Group}
+}
+```
 
 
-
-
-
-
-
-
-
-
-
-
-
+## **<font style="color:rgb(64, 64, 64);">Acknowledgment</font>**<font style="color:rgb(64, 64, 64);"></font>
+This project is based on Mamba ([paper](https://arxiv.org/abs/2312.00752), VMamba ([paper](https://arxiv.org/abs/2401.10166), [code](https://github.com/state-spaces/mamba)), Swin-Transformer ([paper](https://arxiv.org/pdf/2103.14030.pdf), [code](https://github.com/microsoft/Swin-Transformer))
