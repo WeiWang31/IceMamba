@@ -8,8 +8,17 @@
 University, Shanghai, China,  <sup>3</sup> Key Laboratory of Polar Science, MNR, Polar Research Institute of China, Shanghai, China.
 
 Paper: ([https://doi.org/10.1038/s41612-025-01058-0](https://www.nature.com/articles/s41612-025-01058-0))
+Supplementary Information: ([https://doi.org/10.1038/s41612-025-01058-0](https://www.nature.com/articles/s41612-025-01058-0))
+
+Paper file downloading: ([Paper file](https://github.com/WeiWang31/IceMamba/edit/master/assets/Paper.pdf))
+Supplementary Information file downloading: ([Supplementary Information file](https://github.com/WeiWang31/IceMamba/edit/master/assets/Supplementary_Information.pdf))
 
 </div>
+
+# <font style="color:rgb(64, 64, 64);">Overview</font>
+<p align="center">
+  <img src="assets/Overview.png" alt="architecture" width="80%">
+</p>
 
 
 
@@ -175,7 +184,7 @@ bash train.sh
     - <font style="color:rgb(64, 64, 64);">Build upon our codebase</font>
     - <font style="color:rgb(64, 64, 64);">Contact us at</font><font style="color:rgb(64, 64, 64);"> </font>[wang_wei23@m.fudan.edu.cn](mailto:wang_wei23@m.fudan.edu.cn)<font style="color:rgb(64, 64, 64);"> </font><font style="color:rgb(64, 64, 64);">for technical discussions</font>
 
-<font style="color:rgb(64, 64, 64);">If this work contributes to your research, please consider leaving a </font><font style="color:rgb(64, 64, 64);">⭐</font><font style="color:rgb(64, 64, 64);">️ </font>**<font style="color:rgb(64, 64, 64);">star</font>**<font style="color:rgb(64, 64, 64);"> to support open scientific development.</font>
+<font style="color:rgb(64, 64, 64);">If this work contributes to your research, please consider leaving a </font><font style="color:rgb(64, 64, 64);">⭐</font><font style="color:rgb(64, 64, 64);">️ </font>**<font style="color:rgb(64, 64, 64);">star</font>**<font style="color:rgb(64, 64, 64);"> and citing our paper to support open scientific development.</font>
 
 **<font style="color:rgb(64, 64, 64);"></font>**
 
