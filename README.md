@@ -215,4 +215,4 @@ bash train.sh
 
 
 ## **<font style="color:rgb(64, 64, 64);">Acknowledgment</font>**<font style="color:rgb(64, 64, 64);"></font>
-This project is based on Mamba ([paper](https://arxiv.org/abs/2312.00752), VMamba ([paper](https://arxiv.org/abs/2401.10166), [code](https://github.com/state-spaces/mamba)), Swin-Transformer ([paper](https://arxiv.org/pdf/2103.14030.pdf), [code](https://github.com/microsoft/Swin-Transformer))
+This project is based on Mamba ([paper](https://arxiv.org/abs/2312.00752)), VMamba ([paper](https://arxiv.org/abs/2401.10166), [code](https://github.com/MzeroMiko/VMamba)), Swin-Transformer ([paper](https://arxiv.org/pdf/2103.14030.pdf), [code](https://github.com/microsoft/Swin-Transformer))
