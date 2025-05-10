@@ -13,11 +13,8 @@ Paper:
 Supplementary Information:  
 [https://doi.org/10.1038/s41612-025-01058-0](https://www.nature.com/articles/s41612-025-01058-0)  
 
-Paper file downloading:  
-[Paper file](https://github.com/WeiWang31/IceMamba/edit/master/assets/Paper.pdf)  
-
-Supplementary Information file downloading:  
-[Supplementary Information file](https://github.com/WeiWang31/IceMamba/edit/master/assets/Supplementary_Information.pdf)
+[Paper downloading](https://github.com/WeiWang31/IceMamba/edit/master/assets/Paper.pdf)  
+[Supplementary Information downloading](https://github.com/WeiWang31/IceMamba/edit/master/assets/Supplementary_Information.pdf)
 
 
 </div>
