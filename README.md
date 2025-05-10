@@ -7,10 +7,10 @@
 <sup>1</sup>  School of Computer Science, Fudan University, Shanghai, China, <sup>2</sup>  Department of Atmospheric and Oceanic Sciences & Institute of Atmospheric Sciences, Fudan
 University, Shanghai, China,  <sup>3</sup> Key Laboratory of Polar Science, MNR, Polar Research Institute of China, Shanghai, China.
 
-Paper: ([https://doi.org/10.1038/s41612-025-01058-0](https://www.nature.com/articles/s41612-025-01058-0))
+Paper: ([https://doi.org/10.1038/s41612-025-01058-0](https://www.nature.com/articles/s41612-025-01058-0)) \n
 Supplementary Information: ([https://doi.org/10.1038/s41612-025-01058-0](https://www.nature.com/articles/s41612-025-01058-0))
 
-Paper file downloading: ([Paper file](https://github.com/WeiWang31/IceMamba/edit/master/assets/Paper.pdf))
+Paper file downloading: ([Paper file](https://github.com/WeiWang31/IceMamba/edit/master/assets/Paper.pdf)) \n
 Supplementary Information file downloading: ([Supplementary Information file](https://github.com/WeiWang31/IceMamba/edit/master/assets/Supplementary_Information.pdf))
 
 </div>
